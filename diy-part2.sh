@@ -12,3 +12,9 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+
+#passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git -b packages ./package/lean/passwall_package
+git clone https://github.com/xiaorouji/openwrt-passwall.git -b luci ./package/lean/passwall
+cp -rf ./package/lean/passwall_package/* ./package/lean/passwall
+rm -rf ./package/lean/passwall_package
